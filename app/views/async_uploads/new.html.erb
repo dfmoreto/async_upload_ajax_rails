@@ -1,0 +1,9 @@
+<h2>Upload a File</h2>
+
+<%= form_tag "/async_uploads", method: :post do %>
+  <div class="form-group">
+    <%= label_tag "async_upload_file", "File to Upload", class: "control-label" %>
+    <%= file_field_tag "async_upload_file", id: "file_to_upload" %><br />
+  </div>
+  <%= button_tag "Send", class: "btn btn-success", type: :button, id: "send_file" %>
+<% end %>
